@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import './globals.css';
+import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
   title: "Git Dashboard",
@@ -14,7 +15,9 @@ const RootLayout = ({
   return (
     <html lang="en" className="w-screen h-screen">
       <body className="w-full h-full">
-        {children}
+        <SessionProvider>
+          {children}
+        </SessionProvider>
       </body>
     </html>
   );

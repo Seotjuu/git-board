@@ -17,7 +17,7 @@ const RootLayout = ({
       <body className="w-full h-full">
         <SessionProvider>
           {children}
-        </SessionProvider>
+        </SessionProvider>  
       </body>
     </html>
   );

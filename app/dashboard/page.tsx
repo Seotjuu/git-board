@@ -30,6 +30,12 @@ const DashboardPage = () => {
             setRepo(null);
         }
 
+        setContentData(dashboardContentData.map((content) => {
+            return {
+                ...content,
+                content: content.component === "RecentCommits" ? <DashboardCommit repo={repoData} /> : ""
+            }
+        }))
     }, [pathname, param]);
 
     return (

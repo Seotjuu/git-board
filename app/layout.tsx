@@ -3,6 +3,9 @@ import './globals.css';
 import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/icon.png",
+  },
   title: "Git Dashboard",
   description: "A dashboard for your Git repositories",
 };
@@ -17,7 +20,7 @@ const RootLayout = ({
       <body className="w-full h-full">
         <SessionProvider>
           {children}
-        </SessionProvider>  
+        </SessionProvider>
       </body>
     </html>
   );

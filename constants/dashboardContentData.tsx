@@ -1,6 +1,13 @@
+import DashboardCommit from "@/component/dashboard/DashboardCommit";
 import { FaCodeBranch, FaExclamationTriangle, FaHistory, FaSeedling, FaUsers } from "react-icons/fa";
 import { FaCodeMerge } from "react-icons/fa6";
 
+export interface IReposData {
+    name: string;
+    user_name: string;
+    full_name: string;
+    visibility: string;
+}
 
 export const dashboardContentData = [
     {

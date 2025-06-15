@@ -1,5 +1,6 @@
 'use client';
 
+import { CgSpinner } from "react-icons/cg";
 import { signOut, useSession } from "next-auth/react";
 import { BsGithub } from "react-icons/bs";
 import { HiChartBar } from "react-icons/hi";
@@ -10,6 +11,14 @@ const layout = ({
     children: React.ReactNode;
 }>) => {
     const { data } = useSession();
+
+    if (data === undefined) {
+        return (
+            <div className="flex items-center justify-center h-screen">
+                <CgSpinner className="animate-spin" size={40} />
+            </div>
+        );
+    }
 
     return (
         <>
@@ -22,10 +31,10 @@ const layout = ({
                 <div className="flex items-center gap-5">
                     <div className="flex items-center gap-2">
                         {
-                            data?.user?.image ? 
-                            <img src={data?.user?.image} width={20} height={20} className="border rounded-full "    />
-                            :
-                            <BsGithub size={20} className="text-gray-200" />
+                            data?.user?.image ?
+                                <img src={data?.user?.image} width={20} height={20} className="border rounded-full " />
+                                :
+                                <BsGithub size={20} className="text-gray-200" />
                         }
 
                         <span className="text-sm">
@@ -34,9 +43,13 @@ const layout = ({
                     </div>
 
                     <span className="cursor-pointer hover:underline"
-                        onClick={() => signOut({
-                            callbackUrl: "/",
-                        })}
+                        onClick={() => {
+                            signOut({
+                                callbackUrl: "/",
+                            });
+                            localStorage.removeItem("repo");
+                        }
+                        }
                     >
                         Log Out
                     </span>

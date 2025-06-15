@@ -36,11 +36,11 @@ const DashboardPage = () => {
         <>
             <DashboardContainer repo={repo} data={data}>
                 {
-                    contentData?.map((content, index_st) => (
+                    contentData.map((content, index_st) => (
                         <DashboardWrapContent key={index_st}>
                             <h1 className="flex items-center gap-5">{content.icon} {content.title}</h1>
                             <div className="h-[300px] overflow-y-auto">
-                                {index_st === 0 && <DashboardCommit repo={repo} />}
+                                {content.component === "RecentCommits" ? <DashboardCommit repo={repo} /> : null}
                             </div>
                         </DashboardWrapContent>
                     ))

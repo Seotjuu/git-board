@@ -19,7 +19,7 @@ const DashboardPage = () => {
     const pathname = usePathname();
     const param = useSearchParams();
     const [repo, setRepo] = useState<IReposData | null>(null);
-    const [contentData, setContentData] = useState<any[]>();
+    const [contentData, setContentData] = useState<any[]>(dashboardContentData);
 
     useEffect(() => {
         // 선택한 Repository가 있을 경우
@@ -30,23 +30,18 @@ const DashboardPage = () => {
             setRepo(null);
         }
 
-        setContentData(dashboardContentData.map((content) => {
-            return {
-                ...content,
-                content: content.component === "RecentCommits" ? <DashboardCommit repo={repoData} /> : ""
-            }
-        }))
-
     }, [pathname, param]);
 
     return (
         <>
             <DashboardContainer repo={repo} data={data}>
                 {
-                    contentData && contentData.map((content, index_st) => (
-                        <DashboardWrapContent key={index_st} className="animate-pulse">
+                    contentData?.map((content, index_st) => (
+                        <DashboardWrapContent key={index_st}>
                             <h1 className="flex items-center gap-5">{content.icon} {content.title}</h1>
-                            {content.content}
+                            <div className="h-[300px] overflow-y-auto">
+                                {index_st === 0 && <DashboardCommit repo={repo} />}
+                            </div>
                         </DashboardWrapContent>
                     ))
                 }

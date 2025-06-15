@@ -12,13 +12,13 @@ const layout = ({
 }>) => {
     const { data } = useSession();
 
-    if (data === undefined) {
-        return (
-            <div className="flex items-center justify-center h-screen">
-                <CgSpinner className="animate-spin" size={40} />
-            </div>
-        );
-    }
+    // if (data === undefined) {
+    //     return (
+    //         <div className="flex items-center justify-center h-screen">
+    //             <CgSpinner className="animate-spin" size={40} />
+    //         </div>
+    //     );
+    // }
 
     return (
         <>
@@ -32,7 +32,7 @@ const layout = ({
                     <div className="flex items-center gap-2">
                         {
                             data?.user?.image ?
-                                <img src={data?.user?.image} width={20} height={20} className="border rounded-full " />
+                                <img src={data?.user?.image || ""} width={20} height={20} className="border rounded-full " />
                                 :
                                 <BsGithub size={20} className="text-gray-200" />
                         }
@@ -56,7 +56,7 @@ const layout = ({
 
                 </div>
             </nav>
-            <div className="px-10 py-5">
+            <div className="px-10">
                 {children}
             </div>
         </>

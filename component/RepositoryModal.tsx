@@ -48,6 +48,7 @@ const RepositoryModal = () => {
 
   return (
     <>
+      <FaExchangeAlt onClick={resetRepo} className="size-7 rounded-xl cursor-pointer hover:bg-gray-100 p-1" />
       {
         isOpen ?
           <div className="absolute z-25 top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.5)] flex items-center justify-center">
@@ -84,7 +85,7 @@ const RepositoryModal = () => {
             </div>
           </div>
           :
-          <FaExchangeAlt size={20} onClick={resetRepo} />
+          null
       }
     </>
   );

@@ -8,7 +8,7 @@ import {
   IReposData,
 } from "@/constants/dashboardContentData";
 import { useSession } from "next-auth/react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 //: 최근 커밋 내역: 메시지 + 이름
 // : 브랜치 현황
@@ -48,7 +48,7 @@ const DashboardPage = () => {
   }, [param]);
 
   return (
-    <Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
       <DashboardContainer repo={repo} data={data}>
         {contentData.map((content, index_st) => (
           <DashboardWrapContent key={index_st}>

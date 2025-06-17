@@ -31,7 +31,7 @@ const DashboardContainer = ({ children, repo, data }: IProps) => {
                 <div className={`h-7 border border-gray-400 rounded-full py-1 px-2 text-xs ${repo?.visibility ? "" : "bg-gray-200 w-12 border-0 animate-pulse"}`}>{repo?.visibility}</div>
                 <RepositoryModal />
             </div>
-            <div className="grid grid-cols-3 gap-5">
+            <div className="grid grid-cols-2 gap-5">
                 {children}
             </div>
         </>

@@ -21,28 +21,28 @@ export const dashboardContentData = [
         component: "BranchStatus",
         icon: <FaCodeBranch size={20} />,
     },
-    {
-        id: 3,
-        title: "이슈 목록",
-        component: "IssueList",
-        icon: <FaExclamationTriangle size={20} />,
-    },
-    {
-        id: 4,
-        title: "머지 내역",
-        component: "MergeHistory",
-        icon: <FaCodeMerge size={20} />,
-    },
-    {
-        id: 5,
-        title: "참여 멤버별 커밋 횟수",
-        component: "MemberCommitCount",
-        icon: <FaUsers size={20} />,
-    },
-    {
-        id: 6,
-        title: "잔디밭 1년",
-        component: "YearlyGrassPlot",
-        icon: <FaSeedling size={20} />,
-    }
+    // {
+    //     id: 3,
+    //     title: "이슈 목록",
+    //     component: "IssueList",
+    //     icon: <FaExclamationTriangle size={20} />,
+    // },
+    // {
+    //     id: 4,
+    //     title: "머지 내역",
+    //     component: "MergeHistory",
+    //     icon: <FaCodeMerge size={20} />,
+    // },
+    // {
+    //     id: 5,
+    //     title: "참여 멤버별 커밋 횟수",
+    //     component: "MemberCommitCount",
+    //     icon: <FaUsers size={20} />,
+    // },
+    // {
+    //     id: 6,
+    //     title: "잔디밭 1년",
+    //     component: "YearlyGrassPlot",
+    //     icon: <FaSeedling size={20} />,
+    // }
 ]

@@ -9,6 +9,7 @@ import {
   dashboardContentData,
 } from "@/constants/dashboardContentData";
 import DashboardCommit from "./DashboardCommit";
+import DashboardBranchs from "./DashboardBranchs";
 
 const DashboardWrapContent = () => {
   const { data } = useSession();
@@ -33,7 +34,7 @@ const DashboardWrapContent = () => {
             content.component === "RecentCommits" ? (
               <DashboardCommit repo={repoData} />
             ) : (
-              ""
+              <DashboardBranchs repo={repoData} />
             ),
         };
       })
@@ -54,6 +55,11 @@ const DashboardWrapContent = () => {
             {content.component === "RecentCommits" ? (
               <DashboardCommit repo={repo} />
             ) : null}
+            {
+              content.component === "BranchStatus" ? (
+                <DashboardBranchs repo={repo} />
+              ) : null
+            }
           </div>
         </div>
       ))}

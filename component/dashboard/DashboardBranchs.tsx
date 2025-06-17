@@ -27,16 +27,15 @@ const LoadingContent = () => {
     )
 }
 
-const DashboardCommit = ({ repo }: IProps) => {
-    const [commitList, setCommitList] = useState<any[] | null>(null)
+const DashboardBranchs = ({ repo }: IProps) => {
+    const [branchList, setBranchList] = useState<any[] | null>(null)
 
-    const getCommitList = async () => {
+    const getBranchList = async () => {
         try {
-            await fetch(`/api/commit?repo=${repo.name}`).then((res) => {
+            await fetch(`/api/branch?repo=${repo.name}`).then((res) => {
                 res.json().then((data) => {
-                    setCommitList(data);
+                    setBranchList(data);
                     console.log(data);
-                    
                 })
             })
         }
@@ -46,25 +45,24 @@ const DashboardCommit = ({ repo }: IProps) => {
     }
 
     useEffect(() => {
-        repo && getCommitList();
+        repo && getBranchList();
     }, [repo])
 
     return (
         <div className="flex flex-col gap-1 py-1">
             {
-                commitList === null ?
+                branchList === null ?
                     <LoadingContent />
-                    : commitList!.length ? commitList!.map((commit, index_st) => (
+                    : branchList!.length ? branchList!.map((branch, index_st) => (
                         <div key={index_st} className="flex justify-between gap-10 p-1 text-xs border rounded-lg border-gray-300 shadow-sm bg-gray-50">
-                            <div className="flex gap-2">
-                                {commit.commit.message}
-                                <Link href={commit.html_url} className="bg-gray-200 rounded-lg px-1 text-gray">
-                                    {commit.sha.slice(0,7)}
-                                </Link>
+                            {branch.name} 
+                            <div className="flex gap-3">
+                                <Link href={branch.commit.html_url} className="bg-gray-200 rounded-lg px-1 text-gray">
+                                    {branch.commit.sha.slice(0,7)}
+                                </Link> 
+                                <span className="text-green-600 font-bold">+{branch.commit.stats.additions}</span>
+                                <span className="text-red-500 font-bold">-{branch.commit.stats.deletions}</span>
                             </div>
-                             
-
-                             <span>{commit.author.login}</span>
                         </div>
                     )) : <div>커밋 내역이 없습니다.</div>
             }
@@ -72,4 +70,4 @@ const DashboardCommit = ({ repo }: IProps) => {
     )
 }
 
-export default DashboardCommit;
+export default DashboardBranchs;

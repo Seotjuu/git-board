@@ -64,7 +64,7 @@ const DashboardCommit = ({ repo }: IProps) => {
                             </div>
                              
 
-                             <span>{commit.author.login}</span>
+                             <span>{commit.commit.author.name}</span>
                         </div>
                     )) : <div>커밋 내역이 없습니다.</div>
             }

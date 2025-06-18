@@ -1,5 +1,5 @@
 # Node.js 기반 이미지
-FROM node:18
+FROM node:24
 
 # R 설치
 RUN apt-get update && apt-get install -y \

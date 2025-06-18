@@ -1,5 +1,35 @@
 [
   {
+    "sha": "280f0aa9174f827827fe7352b9c26b48e4e70272",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/280f0aa9174f827827fe7352b9c26b48e4e70272",
+    "author": {
+      "name": "Seotjuu",
+      "email": "sjlee@moasoftware.co.kr",
+      "date": "2025-06-18T05:59:03Z"
+    },
+    "message": "[fix] dockerfile 수정",
+    "stats": {
+      "total": 2,
+      "additions": 1,
+      "deletions": 1
+    }
+  },
+  {
+    "sha": "e7f370fab0454bf1ccb6b895239c07f59fb667dc",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/e7f370fab0454bf1ccb6b895239c07f59fb667dc",
+    "author": {
+      "name": "Seotjuu",
+      "email": "sjlee@moasoftware.co.kr",
+      "date": "2025-06-18T05:56:23Z"
+    },
+    "message": "[feat] docker file 추가",
+    "stats": {
+      "total": 68,
+      "additions": 68,
+      "deletions": 0
+    }
+  },
+  {
     "sha": "cffaccbd254305c3056a5b0419a2ee47174a2224",
     "html_url": "https://github.com/Seotjuu/git-board/commit/cffaccbd254305c3056a5b0419a2ee47174a2224",
     "author": {

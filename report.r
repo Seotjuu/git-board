@@ -3,7 +3,7 @@ library(ggplot2)
 library(dplyr)
 
 
-json_file <- "C:/Users/MOA/Desktop/git-board/commits.json"
+json_file <- "./commits.json"
 data <- fromJSON(json_file)
 
 if (nrow(data) == 0 || is.null(data$author$date)) {
@@ -34,7 +34,7 @@ p <- ggplot(commit_counts, aes(x = date, y = count)) +
   theme_minimal() +
   labs(title = "Status of commit data by date", x = "Date", y = "Number of Commits")
 
-pdf("C:/Users/MOA/Desktop/git-board/Status of commit data by date.pdf", width = 8, height = 6)
+pdf("./Status of commit data by date.pdf", width = 8, height = 6)
 print(p)
 dev.off()
 

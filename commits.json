@@ -1,5 +1,20 @@
 [
   {
+    "sha": "cffaccbd254305c3056a5b0419a2ee47174a2224",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/cffaccbd254305c3056a5b0419a2ee47174a2224",
+    "author": {
+      "name": "Seotjuu",
+      "email": "sjlee@moasoftware.co.kr",
+      "date": "2025-06-18T05:38:29Z"
+    },
+    "message": "[feat] RScript connect finish",
+    "stats": {
+      "total": 458,
+      "additions": 441,
+      "deletions": 17
+    }
+  },
+  {
     "sha": "3d1ce7ae75aecdea991b6b01661be9d69451ccf1",
     "html_url": "https://github.com/Seotjuu/git-board/commit/3d1ce7ae75aecdea991b6b01661be9d69451ccf1",
     "author": {

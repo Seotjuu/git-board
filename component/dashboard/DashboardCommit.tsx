@@ -35,8 +35,6 @@ const DashboardCommit = ({ repo }: IProps) => {
             await fetch(`/api/commit?repo=${repo.name}`).then((res) => {
                 res.json().then((data) => {
                     setCommitList(data);
-                    console.log(data);
-                    
                 })
             })
         }
@@ -57,14 +55,19 @@ const DashboardCommit = ({ repo }: IProps) => {
                     : commitList!.length ? commitList!.map((commit, index_st) => (
                         <div key={index_st} className="flex justify-between gap-10 p-1 text-xs border rounded-lg border-gray-300 shadow-sm bg-gray-50">
                             <div className="flex gap-2">
-                                {commit.commit.message}
+                                <span className="font-bold">{commit.author?.name}</span>
+
+                                {commit.message}
                                 <Link href={commit.html_url} className="bg-gray-200 rounded-lg px-1 text-gray">
                                     {commit.sha.slice(0,7)}
                                 </Link>
+                                <span className="text-green-600 font-bold">+{commit.stats.additions}</span>
+                                <span className="text-red-500 font-bold">-{commit.stats.deletions}</span>
                             </div>
                              
-
-                             <span>{commit.commit.author.name}</span>
+                            
+                             
+                            <span className="text-gray-500">{new Date(commit.author?.date).toLocaleDateString()}</span>
                         </div>
                     )) : <div>커밋 내역이 없습니다.</div>
             }

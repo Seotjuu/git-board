@@ -1,0 +1,272 @@
+[
+  {
+    "sha": "3d1ce7ae75aecdea991b6b01661be9d69451ccf1",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/3d1ce7ae75aecdea991b6b01661be9d69451ccf1",
+    "author": {
+      "name": "Seotjuu",
+      "email": "sjlee@moasoftware.co.kr",
+      "date": "2025-06-17T09:04:12Z"
+    },
+    "message": "Merge branch 'main' of https://github.com/Seotjuu/git-board",
+    "stats": {
+      "total": 0,
+      "additions": 0,
+      "deletions": 0
+    }
+  },
+  {
+    "sha": "e9acb87ea6b9fe45042a5636c104d25c621ac941",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/e9acb87ea6b9fe45042a5636c104d25c621ac941",
+    "author": {
+      "name": "Seotjuu",
+      "email": "sjlee@moasoftware.co.kr",
+      "date": "2025-06-17T09:03:56Z"
+    },
+    "message": "[fix] commit name to fix",
+    "stats": {
+      "total": 2,
+      "additions": 1,
+      "deletions": 1
+    }
+  },
+  {
+    "sha": "39f2e3f0978d6007d65a7f2ba3895c1a9a8cd5a5",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/39f2e3f0978d6007d65a7f2ba3895c1a9a8cd5a5",
+    "author": {
+      "name": "Seotjuu",
+      "email": "79149336+Seotjuu@users.noreply.github.com",
+      "date": "2025-06-17T08:53:41Z"
+    },
+    "message": "Merge pull request #1 from Seotjuu/branch_feat\n\n[feat] 브랜치 현황 추가",
+    "stats": {
+      "total": 183,
+      "additions": 155,
+      "deletions": 28
+    }
+  },
+  {
+    "sha": "12e7cc1a17c41fe1dacb1553d918262cbfc63a75",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/12e7cc1a17c41fe1dacb1553d918262cbfc63a75",
+    "author": {
+      "name": "Seotjuu",
+      "email": "sjlee@moasoftware.co.kr",
+      "date": "2025-06-17T08:51:53Z"
+    },
+    "message": "[feat] 브랜치 현황 추가",
+    "stats": {
+      "total": 183,
+      "additions": 155,
+      "deletions": 28
+    }
+  },
+  {
+    "sha": "e8f000f0d5b45f5e4b86cce815a995838b2ce7e6",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/e8f000f0d5b45f5e4b86cce815a995838b2ce7e6",
+    "author": {
+      "name": "Seotjuu",
+      "email": "79149336+tjrenffl8@users.noreply.github.com",
+      "date": "2025-06-16T13:00:28Z"
+    },
+    "message": "[bug] build bug fix",
+    "stats": {
+      "total": 127,
+      "additions": 62,
+      "deletions": 65
+    }
+  },
+  {
+    "sha": "7e44b3f9008f3f67f8b20b879b0cc0ad6314ee22",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/7e44b3f9008f3f67f8b20b879b0cc0ad6314ee22",
+    "author": {
+      "name": "Seotjuu",
+      "email": "79149336+tjrenffl8@users.noreply.github.com",
+      "date": "2025-06-16T12:53:44Z"
+    },
+    "message": "[bug] build bug fix",
+    "stats": {
+      "total": 4,
+      "additions": 2,
+      "deletions": 2
+    }
+  },
+  {
+    "sha": "c689b9a0bab58ec99214d75d59eee2a080633dd5",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/c689b9a0bab58ec99214d75d59eee2a080633dd5",
+    "author": {
+      "name": "Seotjuu",
+      "email": "79149336+tjrenffl8@users.noreply.github.com",
+      "date": "2025-06-16T12:52:31Z"
+    },
+    "message": "[bug] build bug fix",
+    "stats": {
+      "total": 6,
+      "additions": 3,
+      "deletions": 3
+    }
+  },
+  {
+    "sha": "34e6cfea7733862377bc72e4c5207aef542ea987",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/34e6cfea7733862377bc72e4c5207aef542ea987",
+    "author": {
+      "name": "Seotjuu",
+      "email": "79149336+tjrenffl8@users.noreply.github.com",
+      "date": "2025-06-16T12:47:41Z"
+    },
+    "message": "[bug] build bug fix",
+    "stats": {
+      "total": 200,
+      "additions": 106,
+      "deletions": 94
+    }
+  },
+  {
+    "sha": "3157c6e9456435f98e8db0517fb243ddd20de363",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/3157c6e9456435f98e8db0517fb243ddd20de363",
+    "author": {
+      "name": "seotjuu",
+      "email": "tjrenffl8@naver.com",
+      "date": "2025-06-15T15:48:29Z"
+    },
+    "message": "[bug] build error",
+    "stats": {
+      "total": 6,
+      "additions": 6,
+      "deletions": 0
+    }
+  },
+  {
+    "sha": "4adb5664cf9014c86a28c0cf00bcdd9b162294bd",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/4adb5664cf9014c86a28c0cf00bcdd9b162294bd",
+    "author": {
+      "name": "seotjuu",
+      "email": "tjrenffl8@naver.com",
+      "date": "2025-06-15T15:46:09Z"
+    },
+    "message": "[bug] build error",
+    "stats": {
+      "total": 4,
+      "additions": 2,
+      "deletions": 2
+    }
+  },
+  {
+    "sha": "7a814bdac41e53e0cb64b5db34011aaf0e54c749",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/7a814bdac41e53e0cb64b5db34011aaf0e54c749",
+    "author": {
+      "name": "seotjuu",
+      "email": "tjrenffl8@naver.com",
+      "date": "2025-06-15T15:36:12Z"
+    },
+    "message": "[design] loading animation add",
+    "stats": {
+      "total": 124,
+      "additions": 69,
+      "deletions": 55
+    }
+  },
+  {
+    "sha": "5a8a541d216f9c8baaded5edc3bd49143b9dc8d2",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/5a8a541d216f9c8baaded5edc3bd49143b9dc8d2",
+    "author": {
+      "name": "seotjuu",
+      "email": "tjrenffl8@naver.com",
+      "date": "2025-06-15T09:11:54Z"
+    },
+    "message": "[feat] github REST API Commit get add",
+    "stats": {
+      "total": 305,
+      "additions": 236,
+      "deletions": 69
+    }
+  },
+  {
+    "sha": "b3cd259ee47b98c4f9a29af41067d10f2ba52d1e",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/b3cd259ee47b98c4f9a29af41067d10f2ba52d1e",
+    "author": {
+      "name": "Seotjuu",
+      "email": "tjrenffl8@naver.com",
+      "date": "2025-06-08T08:38:26Z"
+    },
+    "message": "[feat] repository handler params setting\n- 추후 github에서 repository list 가져와야함",
+    "stats": {
+      "total": 267,
+      "additions": 249,
+      "deletions": 18
+    }
+  },
+  {
+    "sha": "60496a82e6d5fee9b31b0765c7062aeef5b23f8b",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/60496a82e6d5fee9b31b0765c7062aeef5b23f8b",
+    "author": {
+      "name": "seotjuu",
+      "email": "tjrenffl8@naver.com",
+      "date": "2025-06-07T04:55:48Z"
+    },
+    "message": "[fix] session provider 추가",
+    "stats": {
+      "total": 36,
+      "additions": 31,
+      "deletions": 5
+    }
+  },
+  {
+    "sha": "4383a75b62ad6e84d95d86e71535c2d46b733b0b",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/4383a75b62ad6e84d95d86e71535c2d46b733b0b",
+    "author": {
+      "name": "seotjuu",
+      "email": "tjrenffl8@naver.com",
+      "date": "2025-06-06T08:04:03Z"
+    },
+    "message": "[feat] github Oauth feature",
+    "stats": {
+      "total": 226,
+      "additions": 205,
+      "deletions": 21
+    }
+  },
+  {
+    "sha": "5601405ecdd72d42de6adf12ceb743d3c583ed31",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/5601405ecdd72d42de6adf12ceb743d3c583ed31",
+    "author": {
+      "name": "Seotjuu",
+      "email": "79149336+Seotjuu@users.noreply.github.com",
+      "date": "2025-06-06T04:21:45Z"
+    },
+    "message": "Update README.md",
+    "stats": {
+      "total": 3,
+      "additions": 2,
+      "deletions": 1
+    }
+  },
+  {
+    "sha": "c793ac39086e2c824c77fc5970cc9ad839f3a247",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/c793ac39086e2c824c77fc5970cc9ad839f3a247",
+    "author": {
+      "name": "Seotjuu",
+      "email": "79149336+Seotjuu@users.noreply.github.com",
+      "date": "2025-06-06T04:21:12Z"
+    },
+    "message": "Update README.md",
+    "stats": {
+      "total": 37,
+      "additions": 1,
+      "deletions": 36
+    }
+  },
+  {
+    "sha": "c735be799f73282cce0fcd4dce7d17eb93add027",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/c735be799f73282cce0fcd4dce7d17eb93add027",
+    "author": {
+      "name": "seotjuu",
+      "email": "tjrenffl8@naver.com",
+      "date": "2025-06-06T04:19:44Z"
+    },
+    "message": "[init] git-board initial",
+    "stats": {
+      "total": 1947,
+      "additions": 1947,
+      "deletions": 0
+    }
+  }
+]

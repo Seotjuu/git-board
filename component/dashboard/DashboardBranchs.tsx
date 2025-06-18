@@ -35,7 +35,6 @@ const DashboardBranchs = ({ repo }: IProps) => {
             await fetch(`/api/branch?repo=${repo.name}`).then((res) => {
                 res.json().then((data) => {
                     setBranchList(data);
-                    console.log(data);
                 })
             })
         }
@@ -60,8 +59,6 @@ const DashboardBranchs = ({ repo }: IProps) => {
                                 <Link href={branch.commit.html_url} className="bg-gray-200 rounded-lg px-1 text-gray">
                                     {branch.commit.sha.slice(0,7)}
                                 </Link> 
-                                <span className="text-green-600 font-bold">+{branch.commit.stats.additions}</span>
-                                <span className="text-red-500 font-bold">-{branch.commit.stats.deletions}</span>
                             </div>
                         </div>
                     )) : <div>커밋 내역이 없습니다.</div>

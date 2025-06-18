@@ -1,12 +1,14 @@
-# library(plumber)
-# library(rmarkdown)
-# library(jsonlite)
+# plumber.R
+library(plumber)
 
-# function(req, res) {
-#   json <- fromJSON(req$postBody)
-#   write(toJSON(json), "commits.json")  # 저장
+#* @post /report
+#* @serializer contentType list(type="application/pdf")
+function(req, res) {
+  write(req$postBody, file = "commits.json")  # JSON 파일 저장
 
-#   render("report.r", output_file = "Status of commit data by date.pdf")
+  # 순수 R 스크립트 실행
+  source("report.r")
 
-#   readBin("Status of commit data by date.pdf", "raw", n = file.info("Status of commit data by date.pdf")$size)
-# }
+  # PDF 바이너리로 읽어서 반환
+  readBin("commit_report.pdf", "raw", n = file.info("commit_report.pdf")$size)
+}

@@ -64,9 +64,7 @@ const DashboardCommit = ({ repo }: IProps) => {
                                 <span className="text-green-600 font-bold">+{commit.stats.additions}</span>
                                 <span className="text-red-500 font-bold">-{commit.stats.deletions}</span>
                             </div>
-                             
                             
-                             
                             <span className="text-gray-500">{new Date(commit.author?.date).toLocaleDateString()}</span>
                         </div>
                     )) : <div>커밋 내역이 없습니다.</div>

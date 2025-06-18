@@ -1,35 +1,26 @@
-# Node.js 기반 이미지
-FROM node:24
+FROM rocker/r-ver:4.4.3
 
-# R 설치
+# 필수 패키지 설치
 RUN apt-get update && apt-get install -y \
-    r-base \
-    r-base-dev \
     libcurl4-openssl-dev \
     libssl-dev \
     libxml2-dev \
-    pandoc
-
-# TinyTeX 설치
-RUN R -e "install.packages('tinytex', repos='https://cran.rstudio.com/')"
-RUN R -e "tinytex::install_tinytex()"
+    libfontconfig1-dev \
+    libharfbuzz-dev \
+    libfribidi-dev \
+    libfreetype6-dev \
+    libpng-dev \
+    libtiff5-dev \
+    pandoc \
+    texlive-xetex
 
 # R 패키지 설치
-RUN R -e "install.packages(c('jsonlite', 'ggplot2', 'dplyr'), repos='https://cran.rstudio.com/')"
+RUN R -e "install.packages(c('plumber', 'jsonlite', 'ggplot2', 'dplyr'))"
 
-# 작업 디렉토리 설정
+# 앱 코드 복사
+COPY . /app
 WORKDIR /app
 
-# Next.js 프로젝트 복사
-COPY package*.json ./
-RUN npm install
-COPY . .
+EXPOSE 8000
 
-# Next.js 빌드
-RUN npm run build
-
-# 포트 설정
-EXPOSE 3000
-
-# 애플리케이션 실행
-CMD ["npm", "run", "dev"]
+CMD ["R", "-e", "pr <- plumber::plumb('plumber.R'); pr$run(host='0.0.0.0', port=8000)"]

@@ -21,8 +21,8 @@ export async function GET(request: NextRequest) {
     });
   }
 
-  const pdfPath = path.join(process.cwd(), 'Status of commit data by date.pdf');
-  const fileName = 'Status of commit data by date.pdf';
+  const pdfPath = path.join(process.cwd(), 'commit_report.pdf');
+  const fileName = 'commit_report.pdf';
 
   if (!(await fs.access(pdfPath).then(() => true).catch(() => false))) {
     return new Response(JSON.stringify({ error: 'PDF not found' }), {

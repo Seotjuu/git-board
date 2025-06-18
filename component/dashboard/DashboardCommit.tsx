@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import CommitPdfDownloadButton from "@/component/CommitPdfDownloadButton";
 
 interface IProps {
     repo: any | null;
@@ -52,22 +53,28 @@ const DashboardCommit = ({ repo }: IProps) => {
             {
                 commitList === null ?
                     <LoadingContent />
-                    : commitList!.length ? commitList!.map((commit, index_st) => (
-                        <div key={index_st} className="flex justify-between gap-10 p-1 text-xs border rounded-lg border-gray-300 shadow-sm bg-gray-50">
-                            <div className="flex gap-2">
-                                <span className="font-bold">{commit.author?.name}</span>
+                    : <>
+                        {
+                            commitList!.length ? commitList!.map((commit, index_st) => (
+                                <div key={index_st} className="flex justify-between gap-10 p-1 text-xs border rounded-lg border-gray-300 shadow-sm bg-gray-50">
+                                    <div className="flex gap-2">
+                                        <span className="font-bold">{commit.author?.name}</span>
 
-                                {commit.message}
-                                <Link href={commit.html_url} className="bg-gray-200 rounded-lg px-1 text-gray">
-                                    {commit.sha.slice(0,7)}
-                                </Link>
-                                <span className="text-green-600 font-bold">+{commit.stats.additions}</span>
-                                <span className="text-red-500 font-bold">-{commit.stats.deletions}</span>
-                            </div>
-                            
-                            <span className="text-gray-500">{new Date(commit.author?.date).toLocaleDateString()}</span>
-                        </div>
-                    )) : <div>커밋 내역이 없습니다.</div>
+                                        {commit.message}
+                                        <Link href={commit.html_url} className="bg-gray-200 rounded-lg px-1 text-gray">
+                                            {commit.sha.slice(0,7)}
+                                        </Link>
+                                        <span className="text-green-600 font-bold">+{commit.stats.additions}</span>
+                                        <span className="text-red-500 font-bold">-{commit.stats.deletions}</span>
+                                    </div>
+                                    
+                                    <span className="text-gray-500">{new Date(commit.author?.date).toLocaleDateString()}</span>
+                                </div>
+                            )) : <div>커밋 내역이 없습니다.</div>
+                        }
+
+                        <CommitPdfDownloadButton commitList={commitList} />
+                    </>
             }
         </div>
     )

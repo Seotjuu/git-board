@@ -1,6 +1,5 @@
 'use client';
 
-import CommitPdfDownloadButton from "@/component/CommitPdfDownloadButton";
 import { signOut, useSession } from "next-auth/react";
 import { BsGithub } from "react-icons/bs";
 import { HiChartBar } from "react-icons/hi";
@@ -50,7 +49,6 @@ const layout = ({
             <div className="px-10">
                 {children}
             </div>
-            <CommitPdfDownloadButton />
         </>
     );
 };

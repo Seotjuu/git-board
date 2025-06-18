@@ -3,11 +3,22 @@
 import { useEffect, useState } from "react";
 import { CgSpinner } from "react-icons/cg";
 
-const CommitPdfDownloadButton = () => {
+interface IProps {
+  commitList: any[] | null; 
+}
+
+const CommitPdfDownloadButton = ({commitList}: IProps) => {
   const [loading, setLoading] = useState(false)
   const [url, setUrl] = useState("")
+  
   const downloadPDF = async () => {
     const res = await fetch('/api/report');
+    // const res = await fetch("http://localhost:8000/report", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(commitList), // Next.js에서 보내는 커밋 데이터
+    // });
+
     const blob = await res.blob();
     
     const url = URL.createObjectURL(blob);
@@ -38,9 +49,8 @@ const CommitPdfDownloadButton = () => {
 
       {loading ?
         <>
-          <div className="absolute top-0 w-screen h-screen opacity-25 bg-black flex items-center justify-center"></div>
-          <div className="absolute w-screen h-screen top-0 flex flex-col items-center gap-2">
-              
+          <div className="absolute w-full h-full left-0 top-0 opacity-25 bg-black flex items-center justify-center"></div>
+          <div className="absolute  w-full h-full left-0 top-0 flex flex-col items-center gap-2">
               <div className="font-bold h-screen flex flex-col items-center justify-center gap-5 text-white">
                   PDF 다운로드 중...
                   <CgSpinner size={50} className=" animate-spin" />

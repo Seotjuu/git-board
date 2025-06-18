@@ -1,5 +1,20 @@
 [
   {
+    "sha": "66e9b66112c35a40eb69af60406f8d7a04765691",
+    "html_url": "https://github.com/Seotjuu/git-board/commit/66e9b66112c35a40eb69af60406f8d7a04765691",
+    "author": {
+      "name": "Seotjuu",
+      "email": "sjlee@moasoftware.co.kr",
+      "date": "2025-06-18T06:53:11Z"
+    },
+    "message": "[fix] 이전버전 복구",
+    "stats": {
+      "total": 234,
+      "additions": 109,
+      "deletions": 125
+    }
+  },
+  {
     "sha": "26eab900050d02bc23637998c72079bdba24917c",
     "html_url": "https://github.com/Seotjuu/git-board/commit/26eab900050d02bc23637998c72079bdba24917c",
     "author": {
